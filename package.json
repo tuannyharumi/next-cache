@@ -3,7 +3,26 @@
   "version": "1.0.0",
   "description": "NextJS demo",
   "main": "index.js",
+  "scripts": {
+    "dev":
+      "nodemon server.js -w controllers/ --exec babel-node --presets babel-preset-env --watch server.js",
+    "build": "next build",
+    "start": "next start"
+  },
   "repository": "git@github.com:tuannyharumi/next-cache.git",
   "author": "Tuanny Harumi <tuanny.harumi@gmail.com>",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.2",
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "nodemon": "^1.15.1"
+  }
 }
