@@ -1,0 +1,9 @@
+{
+  "name": "next-cache",
+  "version": "1.0.0",
+  "description": "NextJS demo",
+  "main": "index.js",
+  "repository": "git@github.com:tuannyharumi/next-cache.git",
+  "author": "Tuanny Harumi <tuanny.harumi@gmail.com>",
+  "license": "GPL-3.0"
+}
