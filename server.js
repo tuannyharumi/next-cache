@@ -14,7 +14,7 @@ app
     server.use(
       "/api",
       require("./controllers/movies"),
-      require("./controllers/movies_details")
+      require("./controllers/moviesDetails")
     );
 
     server.get("*", (req, res) => {

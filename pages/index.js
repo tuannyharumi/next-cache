@@ -3,7 +3,7 @@ import { BASE, MOVIES_URL, MOVIES_DETAILS_URL } from "../constants/routes";
 
 const Index = props => (
     <div>
-        Movies: {props.data.movies.join(", ")}
+        Movies: {props.data.map(a => a.title)}
         <br />
         Id: {props.details.id}
     </div>
