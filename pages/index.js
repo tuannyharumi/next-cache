@@ -1,21 +1,26 @@
 import axios from "axios";
 import { BASE, MOVIES_URL, MOVIES_DETAILS_URL } from "../constants/routes";
 
+import MovieCard from "../components/MovieCard";
+
 const Index = props => (
     <div>
-        Movies: {props.data.map(a => a.title)}
-        <br />
-        Id: {props.details.id}
+        {props.movies.map(movie => (
+            <MovieCard
+                key={movie.id}
+                title={movie.title}
+                director={movie.director}
+                description={movie.description}
+            />
+        ))}
     </div>
 );
 
 Index.getInitialProps = async function() {
-    const res = await axios.get(MOVIES_URL);
-    const details = await axios.get(MOVIES_DETAILS_URL(123));
+    const moviesData = await axios.get(MOVIES_URL);
 
     return {
-        data: res.data,
-        details: details.data
+        movies: moviesData.data
     };
 };
 
