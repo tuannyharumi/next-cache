@@ -1,0 +1,14 @@
+{
+  "presets": ["babel-preset-env", "next/babel"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "constants": "./constants",
+          "components": "./components"
+        }
+      }
+    ]
+  ]
+}

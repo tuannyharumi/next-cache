@@ -1,7 +1,6 @@
 import axios from "axios";
-import { BASE, MOVIES_URL, MOVIES_DETAILS_URL } from "../constants/routes";
-
-import MovieCard from "../components/MovieCard";
+import { BASE, MOVIES_URL, MOVIES_DETAILS_URL } from "constants/routes";
+import MovieCard from "components/MovieCard";
 
 const Index = props => (
     <div>

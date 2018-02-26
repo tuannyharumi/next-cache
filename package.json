@@ -4,7 +4,7 @@
   "description": "NextJS demo",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js -w controllers/ --exec babel-node --presets babel-preset-env --watch server.js",
+    "dev": "nodemon server/index.js -w apis/ --exec babel-node --watch server/index.js",
     "build": "next build",
     "start": "next start"
   },
@@ -22,6 +22,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-plugin-module-resolver": "^3.1.0",
     "babel-preset-env": "^1.6.1",
     "nodemon": "^1.15.1"
   }

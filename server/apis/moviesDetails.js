@@ -1,5 +1,5 @@
 import express from "express";
-import { MOVIES_DETAILS_PATH } from "../constants/routes";
+import { MOVIES_DETAILS_PATH } from "constants/routes";
 
 const server = express();
 

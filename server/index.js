@@ -13,8 +13,8 @@ app
 
     server.use(
       "/api",
-      require("./controllers/movies"),
-      require("./controllers/moviesDetails")
+      require("./apis/movies"),
+      require("./apis/moviesDetails")
     );
 
     server.get("*", (req, res) => {

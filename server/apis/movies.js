@@ -1,8 +1,8 @@
 import express from "express";
 import axios from "axios";
 
-import { MOVIES_PATH } from "../constants/routes";
-import { MOVIES_API } from "../constants/externalApis";
+import { MOVIES_PATH } from "constants/routes";
+import { MOVIES_API } from "constants/externalApis";
 
 import cache from "../cache";
 
@@ -12,7 +12,7 @@ server.get(MOVIES_PATH, async (req, res) => {
     const CACHE_KEY = "movies_list";
 
     try {
-        const movies = cache.get(CACHE_KEY, async (err, cachedValue) => {
+        cache.get(CACHE_KEY, async (err, cachedValue) => {
             if (cachedValue) {
                 console.log("Get movies list from cache");
                 res.json(JSON.parse(cachedValue));
