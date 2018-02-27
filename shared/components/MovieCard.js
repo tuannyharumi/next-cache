@@ -1,4 +1,5 @@
 import React from "react";
+import addCache from 'components/ComponentCacher'
 
 const MovieCard = props => (
     <div>
@@ -10,4 +11,4 @@ const MovieCard = props => (
     </div>
 );
 
-export default MovieCard;
+export default addCache(MovieCard);
