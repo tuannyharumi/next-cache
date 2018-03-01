@@ -8,10 +8,10 @@ const cacheInterface = {
      * @param {String} value cache value
      * @param {Number} expiration expiration time in minutes
      */
-    set: (key: int, value:int, expiration: string) => {
+    set: (key, value, expiration: string) => {
         redisClient.set(key, value, "EX", 60 * expiration);
     },
-    get: (key: int, callback) => redisClient.get(key, callback)
+    get: (key, callback) => redisClient.get(key, callback)
 };
 
 export default cacheInterface;
