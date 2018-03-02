@@ -4,9 +4,10 @@
   "description": "NextJS demo",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server/index.js -w apis/ --exec babel-node --watch server/index.js",
-    "build": "next build",
-    "start": "next start"
+    "dev": "concurrently \"yarn run tsc --watch \" \" nodemon server/index.ts\"",
+    "build": "tsc && next build",
+    "start": "tsc && next start",
+    "tsc": "tsc"
   },
   "repository": "git@github.com:tuannyharumi/next-cache.git",
   "author": "Tuanny Harumi <tuanny.harumi@gmail.com>",
@@ -20,10 +21,16 @@
     "redis": "^2.8.0"
   },
   "devDependencies": {
+    "@types/next": "^2.4.8",
+    "@types/react": "^16.0.38",
+    "@zeit/next-typescript": "^0.0.10",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-plugin-module-resolver": "^3.1.0",
     "babel-preset-env": "^1.6.1",
-    "nodemon": "^1.15.1"
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.15.1",
+    "ts-node": "^5.0.0",
+    "typescript": "^2.7.2"
   }
 }
