@@ -7,12 +7,28 @@
     "dev": "concurrently \"yarn run tsc --watch \" \" nodemon server/index.ts\"",
     "build": "tsc && next build",
     "start": "tsc && next start",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "lint": "tslint -p .",
+    "prettify": "prettier --single-quote --trailing-comma es5 --write '{.,__{tests,mocks}__}/**/*.ts' '{.,__{tests,mocks}__}/**/*.tsx'",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "linters": {
+      "*.ts": [
+        "yarn prettify",
+        "git add"
+      ],
+      "*.tsx": [
+        "yarn prettify",
+        "git add"
+      ]
+    }
   },
   "repository": "git@github.com:tuannyharumi/next-cache.git",
   "author": "Tuanny Harumi <tuanny.harumi@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
+    "@zeit/next-typescript": "^0.0.10",
     "axios": "^0.18.0",
     "express": "^4.16.2",
     "next": "^5.0.0",
@@ -23,14 +39,18 @@
   "devDependencies": {
     "@types/next": "^2.4.8",
     "@types/react": "^16.0.38",
-    "@zeit/next-typescript": "^0.0.10",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
     "babel-plugin-module-resolver": "^3.1.0",
     "babel-preset-env": "^1.6.1",
     "concurrently": "^3.5.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
     "nodemon": "^1.15.1",
+    "prettier": "1.11.1",
     "ts-node": "^5.0.0",
+    "tslint": "^5.9.1",
     "typescript": "^2.7.2"
   }
 }

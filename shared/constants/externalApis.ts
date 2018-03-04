@@ -1,1 +1,1 @@
-export const MOVIES_API = "https://ghibliapi.herokuapp.com";
+export const MOVIES_API = 'https://ghibliapi.herokuapp.com';
