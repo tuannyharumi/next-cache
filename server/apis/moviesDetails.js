@@ -1,5 +1,5 @@
-import * as express from "express";
-import { MOVIES_DETAILS_PATH } from "../../shared/constants/routes";
+import express from "express";
+import { MOVIES_DETAILS_PATH } from "constants/routes";
 
 const server = express();
 
