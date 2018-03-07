@@ -5,8 +5,8 @@
       "module-resolver",
       {
         "alias": {
-          "constants": "./shared/constants",
-          "components": "./shared/components"
+          "constants": "./constants",
+          "components": "./components"
         }
       }
     ]
